@@ -1,0 +1,544 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins for a modern, professional look */
+    background: url('https://t4.ftcdn.net/jpg/02/63/39/71/360_F_263397111_ezFxtCBNFaSAiuJOpo2UtWrMJKF6G7ik.jpg') no-repeat center center fixed; /* This fulfills requirement 5.1 (c) */
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+/* This fulfills requirement 5.1 (f) */
+.navbar {
+    background-color: #007bff;
+    padding: 15px 20px;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out; /* This fulfills requirement 5.5 (b) */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.navbar .brand img {
+    height: 40px;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+}
+
+.container1 li {
+    padding: 10px;
+}
+
+.navbar .brand {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    flex: 1;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s; /* This fulfills requirement 5.2 (d) */
+}
+
+.navbar .nav-links a:hover {
+    color: #ddd;
+}
+
+.navbar .nav-links li:last-child {
+    margin-right: 40px; /* Increase the right margin for the last item */
+}
+
+/* Section Styles */
+.hero, .about, .projects, .contact, .resume, .blog {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .container, .about .container, .projects .container, .contact .container, .resume .container, .blog .container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Hero Section */
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.hero-text, .hero-form, .hero-image {
+    animation: fadeIn 2s ease-in-out; /* This fulfills requirement 5.5 (b) */
+}
+
+.hero-text h1 {
+    color: #007bff;
+    font-size: 36px;
+    margin: 0;
+    animation: slideInLeft 1.5s ease-out; /* This fulfills requirement 5.5 (b) */
+}
+
+.hero-text p {
+    margin-top: 10px;
+    font-size: 18px;
+    animation: slideInRight 1.5s ease-out; /* This fulfills requirement 5.5 (b) */
+}
+
+.hero-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* This fulfills requirement 5.2 (e) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* This fulfills requirement 5.2 (e) */
+}
+
+.hero-form h2 {
+    margin-top: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* This fulfills requirement 5.2 (e) */
+}
+
+/* Form Styles */
+/* This fulfills requirement 5.3 (a) */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* This fulfills requirement 5.2 (e) */
+    font-size: 16px;
+    transition: border-color 0.3s; /* This fulfills requirement 5.3 (c) */
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* This fulfills requirement 5.2 (e) */
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* This fulfills requirement 5.2 (e) */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* This fulfills requirement 5.2 (d) */
+    text-align: center;
+    text-decoration: none;
+    animation: pulse 1.5s infinite; /* This fulfills requirement 5.5 (b) */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Fancy Button Styles */
+.fancy-btn {
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.fancy-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.fancy-btn:hover::before {
+    left: 100%;
+}
+
+/* Footer Styles */
+/* This fulfills requirement 5.1 (f) */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+footer .social-links li {
+    margin-left: 20px;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s; /* This fulfills requirement 5.2 (d) */
+}
+
+footer .social-links a:hover {
+    color: #ddd;
+}
+
+footer .social-links i {
+    margin-right: 5px;
+}
+
+footer #last-updated {
+    margin-top: 10px;
+    font-size: 12px; /* Smaller font size */
+    text-align: center;
+}
+
+/* Responsive Design */
+/* This fulfills requirement 5.7 (a), 5.7 (b), 5.7 (c), 5.7 (d) */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .navbar .nav-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .hero, .about, .projects, .contact, .resume, .blog {
+        padding: 120px 20px 60px; /* Add extra padding to the top and bottom */
+    }
+
+    .hero .container, .about .container, .projects .container, .contact .container, .resume .container, .blog .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text, .hero-form, .hero-image, .section ul, .project-card, .resume-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .skills-carousel {
+        margin-bottom: 150px; /* Increase margin for mobile view */
+    }
+
+    footer {
+        padding-bottom: 40px; /* Ensure space between content and footer */
+    }
+}
+
+/* Specific Section Styles */
+
+/* About Section */
+.section {
+    margin-top: 40px;
+}
+
+.section h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+/* Carousel Styles */
+/* This fulfills requirement 5.5 (b) */
+.skills-carousel {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* This fulfills requirement 5.5 (b) */
+}
+
+.carousel-card {
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 10px;
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 10px; /* This fulfills requirement 5.2 (e) */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* This fulfills requirement 5.2 (e) */
+}
+
+.carousel-card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.carousel-card p {
+    margin: 0;
+}
+
+.carousel-card i {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 10px; /* This fulfills requirement 5.2 (e) */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Resume Section */
+.resume-content iframe {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* This fulfills requirement 5.2 (e) */
+    margin-bottom: 20px;
+}
+
+/* Blog Section */
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-post {
+    background-color: #ffffff;
+    border-radius: 10px; /* This fulfills requirement 5.2 (e) */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* This fulfills requirement 5.2 (e) */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.blog-post a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.blog-post:hover {
+    transform: scale(1.05);
+}
+
+/* Animation Keyframes */
+/* This fulfills requirement 5.5 (b) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* This fulfills requirement 5.5 (b) */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* This fulfills requirement 5.5 (b) */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* This fulfills requirement 5.5 (b) */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* This fulfills requirement 5.5 (b) */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+
+/* Ensure the hero container uses the full width and keeps items side by side */
+.hero1 .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Adjust the grid to accommodate text, form, and image */
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+/* lectures page css*/
+.lectures {
+    padding: 100px 20px;
+}
+
+.lectures .container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.lectures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.lecture-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.lecture-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.lecture-card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.lecture-card p {
+    margin-bottom: 10px;
+}
+
+.lecture-card:hover {
+    transform: scale(1.05);
+}
