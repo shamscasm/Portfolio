@@ -9,7 +9,6 @@ body {
 }
 
 /* Navbar Styles */
-/* This fulfills requirement 5.1 (f) */
 .navbar {
     background-color: #007bff;
     padding: 15px 20px;
@@ -62,6 +61,7 @@ body {
     display: flex;
     flex: 2;
     justify-content: flex-end;
+    gap: 10px; /* Add spacing between links */
 }
 
 .navbar .nav-links li {
@@ -89,6 +89,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 60px; /* Add margin to prevent content from going under the navbar */
 }
 
 .hero .container, .about .container, .projects .container, .contact .container, .resume .container, .blog .container {
@@ -141,7 +142,6 @@ body {
 }
 
 /* Form Styles */
-/* This fulfills requirement 5.3 (a) */
 form {
     display: flex;
     flex-direction: column;
@@ -172,7 +172,6 @@ input:focus, textarea:focus {
     outline: none;
 }
 
-/* This fulfills requirement 5.2 (e) */
 .btn {
     background-color: #007bff;
     color: #fff;
@@ -218,11 +217,10 @@ input:focus, textarea:focus {
 }
 
 /* Footer Styles */
-/* This fulfills requirement 5.1 (f) */
 footer {
     background-color: #007bff;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0; /* Reduced padding */
     text-align: center;
     width: 100%;
     bottom: 0;
@@ -241,6 +239,7 @@ footer .social-links {
     padding: 0;
     margin: 0;
     display: flex;
+    gap: 10px; /* Add spacing between links */
 }
 
 footer .social-links li {
@@ -271,19 +270,27 @@ footer #last-updated {
 }
 
 /* Responsive Design */
-/* This fulfills requirement 5.7 (a), 5.7 (b), 5.7 (c), 5.7 (d) */
 @media (max-width: 768px) {
     .navbar .container {
         flex-direction: column;
+        padding: 2px; /* Reduced padding */
     }
+
+    .navbar .nav-links li:last-child {
+        
+        margin-right: 3px;
+    }
+ 
 
     .navbar .nav-links {
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 1px;
+        gap: 2px; /* Reduced gap */
+        font-size: 12px; /* Smaller font size */
     }
 
     .hero, .about, .projects, .contact, .resume, .blog {
-        padding: 120px 20px 60px; /* Add extra padding to the top and bottom */
+        padding: 80px 10px; /* Reduced padding */
     }
 
     .hero .container, .about .container, .projects .container, .contact .container, .resume .container, .blog .container {
@@ -301,7 +308,9 @@ footer #last-updated {
     }
 
     footer {
-        padding-bottom: 40px; /* Ensure space between content and footer */
+        padding-bottom: 9px; /* Ensure space between content and footer */
+        font-size: 8px; /* Smaller font size */
+        padding-top: 9px;
     }
 }
 
@@ -327,7 +336,6 @@ footer #last-updated {
 }
 
 /* Carousel Styles */
-/* This fulfills requirement 5.5 (b) */
 .skills-carousel {
     position: relative;
     overflow: hidden;
@@ -426,7 +434,6 @@ footer #last-updated {
 }
 
 /* Animation Keyframes */
-/* This fulfills requirement 5.5 (b) */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -438,7 +445,6 @@ footer #last-updated {
     }
 }
 
-/* This fulfills requirement 5.5 (b) */
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -450,7 +456,6 @@ footer #last-updated {
     }
 }
 
-/* This fulfills requirement 5.5 (b) */
 @keyframes slideInRight {
     from {
         opacity: 0;
@@ -462,7 +467,6 @@ footer #last-updated {
     }
 }
 
-/* This fulfills requirement 5.5 (b) */
 @keyframes slideDown {
     from {
         opacity: 0;
@@ -474,7 +478,6 @@ footer #last-updated {
     }
 }
 
-/* This fulfills requirement 5.5 (b) */
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
@@ -484,8 +487,6 @@ footer #last-updated {
     }
 }
 
-
-
 /* Ensure the hero container uses the full width and keeps items side by side */
 .hero1 .container {
     display: grid;
@@ -494,9 +495,7 @@ footer #last-updated {
     align-items: center;
 }
 
-
-
-/* lectures page css*/
+/* lectures page css */
 .lectures {
     padding: 100px 20px;
 }
